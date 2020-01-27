@@ -170,5 +170,5 @@ services:
   firefox:
    build: ./firefox/
    shm_size: '1gb'
-    networks:
-     VDI:
+   networks:
+    VDI:
