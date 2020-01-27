@@ -87,8 +87,6 @@ version: '2.0'
 networks:
   guacnetwork_compose:
     driver: bridge
-    
-  networks:
   VDI:
     driver: bridge
 # services
