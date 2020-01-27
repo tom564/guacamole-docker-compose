@@ -171,7 +171,7 @@ services:
    networks:
     VDI:
    
-   chrome:
+  chrome:
    build: ./chrome/
    shm_size: '1gb'
    networks:
