@@ -87,7 +87,10 @@ version: '2.0'
 networks:
   guacnetwork_compose:
     driver: bridge
-
+    
+  networks:
+  VDI:
+    driver: bridge
 # services
 services:
   # guacd
@@ -96,6 +99,7 @@ services:
     image: guacamole/guacd
     networks:
       guacnetwork_compose:
+      VDI:
     restart: always
     volumes:
     - ./drive:/drive:rw
@@ -162,3 +166,10 @@ services:
 # nginx-debug-mode
 #   command: /bin/bash -c "nginx-debug -g 'daemon off;'"
 ####################################################################################
+
+  firefox:
+    container_name: firefox
+     build: ./firefox/
+     shm_size: '1gb'
+    networks:
+      VDI:
