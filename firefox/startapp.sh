@@ -1,5 +1,5 @@
 #!/bin/bash
 while true; do
-firefox
+firefox -private
 sleep 1
 done
