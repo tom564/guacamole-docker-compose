@@ -168,7 +168,6 @@ services:
 ####################################################################################
 
   firefox:
-   container_name: firefox
    build: ./firefox/
    shm_size: '1gb'
     networks:
